@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>울산공업고등학교 스마트건설과</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside>
+        <div class="logo-area">
+            <img src="image/1.png" alt="Logo">
+            <h2>스마트건설과</h2>
+        </div>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-item active">
+                <i class="fa-solid fa-house"></i> 홈
+            </a>
+            <a href="#certifications" class="nav-item">
+                <i class="fa-solid fa-award"></i> 자격증 취득
+            </a>
+            <a href="#employment" class="nav-item">
+                <i class="fa-solid fa-briefcase"></i> 취업 현황
+            </a>
+            <a href="#planner" class="nav-item">
+                <i class="fa-solid fa-calendar-check"></i> 학습 플래너
+            </a>
+            <a href="#teachers" class="nav-item">
+                <i class="fa-solid fa-chalkboard-user"></i> 교사 소개
+            </a>
+            <!-- Class Board Dropdown -->
+            <div class="nav-item submenu-toggle">
+                <div style="display:flex; align-items:center;">
+                    <i class="fa-solid fa-users-rectangle"></i> 학급 게시판
+                </div>
+                <i class="fa-solid fa-chevron-down submenu-icon"></i>
+            </div>
+            <div class="submenu">
+                <div class="submenu-item" data-class="1-10">1학년 10반</div>
+                <div class="submenu-item" data-class="1-11">1학년 11반</div>
+                <div class="submenu-item" data-class="1-12">1학년 12반</div>
+                <div class="submenu-item" data-class="1-13">1학년 13반</div>
+                <div class="submenu-item" data-class="2-12">2학년 12반</div>
+                <div class="submenu-item" data-class="2-13">2학년 13반</div>
+                <div class="submenu-item" data-class="3-12">3학년 12반</div>
+                <div class="submenu-item" data-class="3-13">3학년 13반</div>
+            </div>
+
+            <a href="#notices" class="nav-item">
+                <i class="fa-solid fa-bullhorn"></i> 공지사항
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <span style="font-weight:700;">스마트건설과</span>
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="page-header">
+                <h1>환영합니다 👋</h1>
+            </div>
+            <div
+                style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1') center/cover; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem;">
+                <div style="text-align: center;">
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">미래를 건설하는 스마트 인재</h2>
+                    <p>울산공업고등학교 스마트건설과입니다.</p>
+                </div>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3><i class="fa-solid fa-bullhorn" style="color:var(--primary-color);"></i> 최신 공지</h3>
+                    <p>2026학년도 자격증 특강 일정이 발표되었습니다.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-trophy" style="color:var(--accent-color);"></i> 자랑스러운 얼굴</h3>
+                    <p>전국 기능경기대회 금메달 수상!</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fa-solid fa-calendar-day" style="color:#28a745;"></i> 오늘의 일정</h3>
+                    <p>2학년 현장 실습 (14:00~)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="content-section">
+            <div class="page-header">
+                <h1>자격증 취득 현황 🏆</h1>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <i class="fa-solid fa-helicopter"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>드론자격증</h3>
+                    <p>초경량 비행장치 조종 자격</p>
+                    <div class="btn-group" style="display: flex; gap: 5px; flex-wrap: wrap;">
+                        <a href="https://edu.kotsa.or.kr/user/Main.do" target="_blank"
+                            style="display: inline-block; margin-top: 10px; color: var(--primary-color); font-weight: bold; text-decoration: underline;">TS
+                            한국교통안전공단배움터</a>
+                        <a href="https://youtu.be/qbt1KBPW9DE?si=72ESOtVP3Crhh0Aj" target="_blank"
+                            style="display: inline-block; margin-top: 10px; padding: 5px 10px; background-color: #ff0000; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem;">
+                            <i class="fa-brands fa-youtube"></i> 관련 영상 보러가기
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-draw-polygon"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>측량기능사</h3>
+                    <p>정밀 측량 기술 습득</p>
+                    <a href="https://youtu.be/P4xKixFEkvw?si=QN2HM9RDC5lSwRCz" target="_blank"
+                        style="display: inline-block; margin-top: 10px; padding: 5px 10px; background-color: #ff0000; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem;">
+                        <i class="fa-brands fa-youtube"></i> 관련 영상 보러가기
+                    </a>
+                </div>
+                <div class="card"><i class="fa-solid fa-city"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>콘크리트기능사</h3>
+                    <p>콘크리트 시공/품질</p>
+                    <a href="https://youtu.be/GlUD7RtTA_U?si=-zEfsX--mN4t2AIk" target="_blank"
+                        style="display: inline-block; margin-top: 10px; padding: 5px 10px; background-color: #ff0000; color: white; border-radius: 4px; text-decoration: none; font-size: 0.8rem;">
+                        <i class="fa-brands fa-youtube"></i> 관련 영상 보러가기
+                    </a>
+                </div>
+                <div class="card"><i class="fa-solid fa-layer-group"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>방수기능사</h3>
+                    <p>방수 시공 기술</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-paint-roller"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>건축도장기능사</h3>
+                    <p>도장 및 색채</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-map-location-dot"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>지도제작기능사</h3>
+                    <p>GIS 및 지도 제작</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-compass-drafting"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>지적기능사</h3>
+                    <p>토지 경계/면적 측량</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-laptop-code"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>전산응용토목제도</h3>
+                    <p>토목 CAD 설계</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-building"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>전산응용건축제도</h3>
+                    <p>건축 CAD 설계</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-border-all"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>타일기능사</h3>
+                    <p>타일 시공 전문</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-flask"
+                        style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3>건설재료시험</h3>
+                    <p>재료 물성 시험</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Employment Section -->
+        <section id="employment" class="content-section">
+            <div class="page-header">
+                <h1>졸업 후 진로 / 취업 현황 💼</h1>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>공무원 / 공기업</h3>
+                    <ul style="margin-top:1rem; padding-left:1.2rem; line-height:1.8;">
+                        <li>울산광역시청 9급 토목직</li>
+                        <li>한국토지주택공사(LH)</li>
+                        <li>한국국토정보공사(LX)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>대기업 / 중견기업</h3>
+                    <ul style="margin-top:1rem; padding-left:1.2rem; line-height:1.8;">
+                        <li>삼성물산, 현대건설</li>
+                        <li>포스코건설, 롯데건설</li>
+                        <li>지역 우수 중견 건설사</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>대학 진학</h3>
+                    <ul style="margin-top:1rem; padding-left:1.2rem; line-height:1.8;">
+                        <li>울산대학교 토목공학부</li>
+                        <li>국립부경대학교</li>
+                        <li>선취업 후진학 제도 활용</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Planner Section -->
+        <section id="planner" class="content-section">
+            <div class="page-header">
+                <h1>학습 플래너 / 커리큘럼 📅</h1>
+            </div>
+
+            <div class="planner-tabs">
+                <button class="tab-btn active" data-tab="tab-curriculum">정규 교육과정</button>
+                <button class="tab-btn" data-tab="tab-drone">2학년 드론 수업</button>
+            </div>
+
+            <div id="tab-curriculum" class="tab-content active">
+                <div
+                    style="width: 100%; height: 700px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); background: white;">
+                    <iframe src="00index.html" style="width: 100%; height: 100%; border: none;"></iframe>
+                </div>
+            </div>
+
+            <div id="tab-drone" class="tab-content">
+                <div class="card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h3><i class="fa-solid fa-helicopter"></i> 2학년 드론 측량 실습 게시판</h3>
+                        <button
+                            style="padding: 0.5rem 1rem; background: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">글쓰기</button>
+                    </div>
+                    <table class="board-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>날짜</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>공지</td>
+                                <td style="text-align:left; font-weight:bold;">드론 비행 안전 수칙 필독</td>
+                                <td>관리자</td>
+                                <td>2026.03.01</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td style="text-align:left;">[3조] 정사영상 결과물 제출</td>
+                                <td>박준형</td>
+                                <td>2026.03.20</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td style="text-align:left;">배터리 불량 관련 문의</td>
+                                <td>김민수</td>
+                                <td>2026.03.19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="content-section">
+            <div class="page-header">
+                <h1>선생님 소개 👨‍🏫</h1>
+            </div>
+            <div class="card-grid">
+                <a href="teacher_ahn.html" target="_blank" class="card"
+                    style="text-decoration:none; color:inherit; border: 2px solid var(--primary-color);">
+                    <div
+                        style="height: 150px; background: #e3f2fd; display:flex; align-items:center; justify-content:center; font-size:4rem; color:var(--primary-color); margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0;">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3>안수현 선생님</h3>
+                    <p>2학년 담임 / 드론·측량</p>
+                    <p style="font-size:0.85rem; color:#666; margin-top:0.5rem;">클릭하여 공지사항 확인하기</p>
+                </a>
+                <div class="card">
+                    <div
+                        style="height: 150px; background: #eee; display:flex; align-items:center; justify-content:center; font-size:4rem; color:#999; margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0;">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>김지형 선생님</h3>
+                    <p>학과장 / 구조역학</p>
+                </div>
+                <div class="card">
+                    <div
+                        style="height: 150px; background: #eee; display:flex; align-items:center; justify-content:center; font-size:4rem; color:#999; margin: -2rem -2rem 1.5rem -2rem; border-radius: 12px 12px 0 0;">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>이민수 선생님</h3>
+                    <p>CAD 설계 담당</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Class Board Section (Dynamic) -->
+        <section id="class-board" class="content-section">
+            <div class="page-header">
+                <h1 id="current-class-title">학급 게시판</h1>
+            </div>
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <p>학급 공지사항 및 자유 게시판입니다.</p>
+                    <button
+                        style="padding: 0.5rem 1rem; background: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">글쓰기</button>
+                </div>
+                <table class="board-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">번호</th>
+                            <th style="width: 60%;">제목</th>
+                            <th style="width: 15%;">작성자</th>
+                            <th style="width: 15%;">날짜</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span
+                                    style="background: #ffeeba; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">공지</span>
+                            </td>
+                            <td>우리 반 시간표 안내</td>
+                            <td>담임교사</td>
+                            <td>2026.03.02</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>오늘 학급 청소 구역 배정표</td>
+                            <td>미화부장</td>
+                            <td>2026.03.15</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>체육대회 반티 투표해주세요!</td>
+                            <td>반장</td>
+                            <td>2026.03.10</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>환영합니다!</td>
+                            <td>관리자</td>
+                            <td>2026.03.01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Notices Section -->
+        <section id="notices" class="content-section">
+            <div class="page-header">
+                <h1>전체 공지사항 📢</h1>
+            </div>
+            <div class="card">
+                <div class="board-table">
+                    <!-- Basic list style for simplicity or reuse current table -->
+                    <div
+                        style="display: flex; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid #eee;">
+                        <span>[공지] 2026학년도 기능사 자격증 특강 안내</span>
+                        <span style="color:#888;">2026.01.20</span>
+                    </div>
+                    <div
+                        style="display: flex; justify-content: space-between; padding: 1.5rem; border-bottom: 1px solid #eee;">
+                        <span>[행사] 추계 현장 체험학습 일정 안내</span>
+                        <span style="color:#888;">2026.01.15</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 1.5rem;">
+                        <span>[취업] 삼성물산 현장 실습생 모집</span>
+                        <span style="color:#888;">2025.12.30</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
