@@ -12,7 +12,6 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Inline CSS -->
     <style>
         :root {
             --primary-color: #0056b3;
@@ -27,8 +26,6 @@
             --border-radius: 12px;
             --transition: all 0.3s ease;
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-            /* Exam Finder Colors */
             --ef-primary: #2563eb;
             --ef-dark: #1e40af;
             --ef-bg: rgba(30, 41, 59, 1);
@@ -52,7 +49,6 @@
             display: flex;
         }
 
-        /* Sidebar Styling */
         aside {
             width: 260px;
             background-color: var(--sidebar-bg);
@@ -118,7 +114,6 @@
             text-align: center;
         }
 
-        /* Submenu */
         .submenu-toggle {
             display: flex;
             justify-content: space-between;
@@ -157,7 +152,6 @@
             color: var(--sidebar-active);
         }
 
-        /* Main Content Area */
         main {
             flex: 1;
             height: 100%;
@@ -200,7 +194,6 @@
             font-weight: 800;
         }
 
-        /* Cards and Grid */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -221,7 +214,6 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Tables */
         .board-table {
             width: 100%;
             border-collapse: collapse;
@@ -247,7 +239,91 @@
             letter-spacing: 0.05em;
         }
 
-        /* Exam Finder Styles (Integrated) */
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #333;
+        }
+
+        .qr-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .qr-item {
+            text-align: center;
+            padding: 1rem;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .qr-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .qr-item img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Exam Finder Styles */
         .exam-finder-wrapper {
             background-color: var(--ef-bg);
             color: var(--ef-text);
@@ -349,7 +425,6 @@
             color: var(--ef-muted);
         }
 
-        /* Schedule Display */
         .schedule-card {
             background: var(--ef-card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -401,7 +476,6 @@
             color: var(--ef-muted);
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             body {
                 flex-direction: column;
@@ -412,7 +486,6 @@
                 display: none;
             }
 
-            /* Mobile sidebar hidden */
             .mobile-header {
                 display: flex;
             }
@@ -434,7 +507,7 @@
     <!-- Sidebar -->
     <aside>
         <div class="logo-area">
-            <img src="image/1.png" alt="울산공업고등학교 스마트건설과 로고" style="display: block;">
+            <img src="./image/1.png" alt="" style="height: 40px; display: block; margin: 0 auto 0.5rem;">
             <h2>울산공업고등학교 스마트건설과</h2>
         </div>
         <nav class="nav-menu">
@@ -453,7 +526,6 @@
             <a href="#teachers" class="nav-item">
                 <i class="fa-solid fa-chalkboard-user"></i> 교사 소개
             </a>
-            <!-- Class Board Dropdown -->
             <div class="nav-item submenu-toggle">
                 <div style="display:flex; align-items:center;">
                     <i class="fa-solid fa-users-rectangle"></i> 학급 게시판
@@ -461,7 +533,6 @@
                 <i class="fa-solid fa-chevron-down submenu-icon"></i>
             </div>
             <div class="submenu">
-                <!-- Changed 1-10 to direct link -->
                 <a href="https://mercurial-antler-8cc.notion.site/1-10-2ef5898c3e1880f9947be54528c1c328?source=copy_link"
                     target="_blank" class="submenu-item" style="text-decoration:none; display:block;">1학년 10반</a>
                 <div class="submenu-item" data-class="1-11">1학년 11반</div>
@@ -472,7 +543,6 @@
                 <div class="submenu-item" data-class="3-12">3학년 12반</div>
                 <div class="submenu-item" data-class="3-13">3학년 13반</div>
             </div>
-
             <a href="#notices" class="nav-item">
                 <i class="fa-solid fa-bullhorn"></i> 공지사항
             </a>
@@ -487,8 +557,6 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Similar content for Home, Certifications, Employment, Notices, Teachers -->
-        <!-- Just overriding the Planner Section primarily, but need full file context -->
 
         <!-- Home Section -->
         <section id="home" class="content-section active">
@@ -531,7 +599,6 @@
                 <h1>자격증 취득 현황 🏆</h1>
             </div>
             <div class="card-grid">
-                <!-- Cards content same as before -->
                 <div class="card">
                     <i class="fa-solid fa-helicopter"
                         style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
@@ -618,6 +685,11 @@
                 <div class="card">
                     <h3>공무원 / 공기업</h3>
                     <ul style="margin-top:1rem; padding-left:1.2rem; line-height:1.8;">
+                        <li>
+                            2025 한국철도공사(코레일) 정0준, 박0현
+                            <button class="contact-btn" onclick="openContactModal()">[연락하기]</button>
+                        </li>
+                        <li>울산광역시청 9급 토목직 김0진</li>
                         <li>울산광역시청 9급 토목직</li>
                         <li>한국토지주택공사(LH)</li>
                         <li>한국국토정보공사(LX)</li>
@@ -642,7 +714,7 @@
             </div>
         </section>
 
-        <!-- Learning Planner Section (Merged) -->
+        <!-- Learning Planner Section -->
         <section id="planner" class="content-section">
             <div class="page-header">
                 <h1>학습 플래너 / 국가기술자격 조회 📅</h1>
@@ -772,6 +844,29 @@
 
     </main>
 
+    <!-- QR Code Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeContactModal()">&times;</span>
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 1rem;">졸업생 연락처</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">QR 코드를 스캔하여 연락하세요</p>
+            <div class="qr-container">
+                <div class="qr-item">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">정0준</h3>
+                    <img src="C:/Users/t3chr/.gemini/antigravity/brain/01faba68-351b-4b4e-8bc2-b281fba5497e/qr_code_jung_1769189218730.png"
+                        alt="정0준 연락처 QR">
+                    <p style="font-size: 0.9rem; color: #666;">한국철도공사(코레일)</p>
+                </div>
+                <div class="qr-item">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1rem;">박0현</h3>
+                    <img src="C:/Users/t3chr/.gemini/antigravity/brain/01faba68-351b-4b4e-8bc2-b281fba5497e/qr_code_park_1769189236261.png"
+                        alt="박0현 연락처 QR">
+                    <p style="font-size: 0.9rem; color: #666;">한국철도공사(코레일)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Sidebar Navigation Logic
@@ -806,116 +901,161 @@
                     document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
                     document.querySelectorAll('.submenu-item').forEach(el => el.classList.remove('active'));
                     item.classList.add('active');
-                    classBoardToggle.classList.add('active');
                     showSection('class-board');
-                    const className = item.getAttribute('data-class');
-                    document.getElementById('current-class-title').textContent = `${className} 학급 게시판`;
+                    const className = item.getAttribute('data-class') || item.textContent;
+                    document.getElementById('current-class-title').textContent = className + ' 게시판';
                 });
             });
 
             function showSection(id) {
-                sections.forEach(sec => sec.classList.remove('active'));
-                const target = document.getElementById(id);
-                if (target) {
-                    target.classList.add('active');
-                    window.scrollTo(0, 0);
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const targetSection = document.getElementById(id);
+                if (targetSection) {
+                    targetSection.classList.add('active');
                 }
             }
         });
 
-        // ==========================================
-        // EXAM FINDER LOGIC (Merged)
-        // ==========================================
-        const MOCK_QUAL_LIST = [
-            { name: "전기기능사", code: "6335" },
-            { name: "정보처리기능사", code: "1320" },
-            { name: "컴퓨터그래픽스운용기능사", code: "7796" },
-            { name: "조리기능사(한식)", code: "2971" },
-            { name: "굴착기운전기능사", code: "7140" },
-            { name: "측량기능사", code: "7511" },
-            { name: "건설재료시험기능사", code: "7530" },
-            { name: "콘크리트기능사", code: "7520" },
-            { name: "지적기능사", code: "7410" },
-            { name: "지도제작기능사", code: "7420" }
-        ];
-
-        async function searchQual() {
-            const query = document.getElementById('ef-searchInput').value.trim();
-            if (!query) return;
-
-            const resultsUI = document.getElementById('search-results');
-            const loadingUI = document.getElementById('ef-loading');
-            const displayUI = document.getElementById('schedule-display');
-
-            resultsUI.style.display = 'none';
-            displayUI.classList.remove('active');
-            loadingUI.style.display = 'block';
-
-            // Simulate Network Delay and use Mock Data immediately for reliability
-            // (Using pure mock/fallback data to guarantee "it works" without proxy issues)
-            setTimeout(() => {
-                loadingUI.style.display = 'none';
-                let matches = MOCK_QUAL_LIST.filter(m => m.name.includes(query));
-
-                if (matches.length === 0) {
-                    alert("검색 결과가 없거나 API 연결이 불안정합니다. (데모 모드)");
-                    return;
-                }
-
-                resultsUI.innerHTML = '';
-                resultsUI.style.display = 'block';
-
-                matches.forEach(m => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<span>${m.name}</span><span class="ef-code">코드: ${m.code}</span>`;
-                    li.onclick = () => showSchedule(m.name, m.code);
-                    resultsUI.appendChild(li);
-                });
-            }, 800);
+        // Modal Functions
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
         }
 
-        function showSchedule(name, code) {
-            document.getElementById('search-results').style.display = 'none';
-            document.getElementById('ef-loading').style.display = 'none';
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeContactModal();
+            }
+        }
+
+        // Exam Finder Functions
+        const mockData = {
+            "7910": {
+                "qualName": "측량기능사",
+                "qualCode": "7910",
+                "schedules": [
+                    { "회차": "1회", "필기원서접수": "2026-01-06~2026-01-09", "필기시험": "2026-01-26", "필기합격발표": "2026-02-05", "실기원서접수": "2026-03-10~2026-03-13", "실기시험": "2026-04-05~2026-04-18", "최종합격발표": "2026-05-09" },
+                    { "회차": "2회", "필기원서접수": "2026-04-14~2026-04-17", "필기시험": "2026-05-11", "필기합격발표": "2026-05-21", "실기원서접수": "2026-05-27~2026-05-30", "실기시험": "2026-06-21~2026-07-04", "최종합격발표": "2026-07-18" }
+                ]
+            },
+            "7820": {
+                "qualName": "지적기능사",
+                "qualCode": "7820",
+                "schedules": [
+                    { "회차": "1회", "필기원서접수": "2026-01-06~2026-01-09", "필기시험": "2026-01-26", "필기합격발표": "2026-02-05", "실기원서접수": "2026-03-10~2026-03-13", "실기시험": "2026-04-05~2026-04-18", "최종합격발표": "2026-05-09" }
+                ]
+            },
+            "7730": {
+                "qualName": "콘크리트기능사",
+                "qualCode": "7730",
+                "schedules": [
+                    { "회차": "2회", "필기원  서접수": "2026-04-14~2026-04-17", "필기시험": "2026-05-11", "필기합격발표": "2026-05-21", "실기원서접수": "2026-05-27~2026-05-30", "실기시험": "2026-06-21~2026-07-04", "최종합격발표": "2026-07-18" }
+                ]
+            }
+        };
+
+        let allQuals = [];
+        Object.keys(mockData).forEach(code => {
+            allQuals.push({
+                qualName: mockData[code].qualName,
+                qualCode: code
+            });
+        });
+
+        function searchQual() {
+            const searchTerm = document.getElementById('ef-searchInput').value.trim();
+            const resultsUl = document.getElementById('search-results');
+            resultsUl.innerHTML = '';
+
+            if (!searchTerm) {
+                resultsUl.style.display = 'none';
+                return;
+            }
+
+            const filtered = allQuals.filter(q =>
+                q.qualName.includes(searchTerm)
+            );
+
+            if (filtered.length === 0) {
+                resultsUl.innerHTML = '<li style="color:#999;">검색 결과가 없습니다.</li>';
+                resultsUl.style.display = 'block';
+                return;
+            }
+
+            filtered.forEach(q => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${q.qualName}</span><span class="ef-code">${q.qualCode}</span>`;
+                li.onclick = () => showSchedule(q.qualCode);
+                resultsUl.appendChild(li);
+            });
+            resultsUl.style.display = 'block';
+        }
+
+        function showSchedule(qualCode) {
+            const data = mockData[qualCode];
+            if (!data) {
+                alert('일정 정보를 찾을 수 없습니다.');
+                return;
+            }
+
+            document.getElementById('displayQualName').textContent = data.qualName;
+            document.getElementById('displayQualCode').textContent = `코드: ${data.qualCode}`;
 
             const scheduleList = document.getElementById('schedule-list');
             scheduleList.innerHTML = '';
-            document.getElementById('displayQualName').innerText = name;
-            document.getElementById('displayQualCode').innerText = `종목코드: ${code}`;
 
-            // Verified 2026 Mock Data (Since real API won't have 2026 data yet mostly)
-            const items = [
-                { title: "2026년 정기 기능사 1회", docReg: "2026.01.05 ~ 01.08", docExam: "2026.01.25", pracReg: "2026.02.15 ~ 02.18", pracExam: "2026.03.10 ~ 03.25", pass: "2026.03.31" },
-                { title: "2026년 정기 기능사 2회", docReg: "2026.03.20 ~ 03.23", docExam: "2026.04.10", pracReg: "2026.05.05 ~ 05.08", pracExam: "2026.05.25 ~ 06.10", pass: "2026.06.15" },
-                { title: "2026년 정기 기능사 3회", docReg: "2026.06.10 ~ 06.13", docExam: "2026.06.30", pracReg: "2026.07.20 ~ 07.23", pracExam: "2026.08.10 ~ 08.25", pass: "2026.08.31" },
-                { title: "2026년 정기 기능사 4회", docReg: "2026.09.05 ~ 09.08", docExam: "2026.09.25", pracReg: "2026.10.15 ~ 10.18", pracExam: "2026.11.10 ~ 11.25", pass: "2026.11.30" }
-            ];
-
-            items.forEach(data => {
+            data.schedules.forEach(sch => {
                 const div = document.createElement('div');
                 div.className = 'schedule-item';
                 div.innerHTML = `
-                    <div class="schedule-title" style="color:#60a5fa; font-weight:700; margin-bottom:1rem;">${data.title}</div>
+                    <h4 style="color: white; margin-bottom: 0.8rem; font-size: 1.1rem;">${sch['회차']}</h4>
                     <div class="ef-date-grid">
-                        <div class="ef-date-box"><span class="ef-date-label">필기 원서접수</span><span class="ef-date-value">${data.docReg}</span></div>
-                        <div class="ef-date-box"><span class="ef-date-label">필기 시험일</span><span class="ef-date-value">${data.docExam}</span></div>
-                        <div class="ef-date-box"><span class="ef-date-label">실기 원서접수</span><span class="ef-date-value">${data.pracReg}</span></div>
-                        <div class="ef-date-box"><span class="ef-date-label">실기 시험일</span><span class="ef-date-value">${data.pracExam}</span></div>
-                        <div class="ef-date-box"><span class="ef-date-label">합격자 발표</span><span class="ef-date-value">${data.pass}</span></div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">필기 원서접수</span>
+                            <span class="ef-date-value">${sch['필기원서접수']}</span>
+                        </div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">필기시험</span>
+                            <span class="ef-date-value">${sch['필기시험']}</span>
+                        </div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">필기 합격발표</span>
+                            <span class="ef-date-value">${sch['필기합격발표']}</span>
+                        </div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">실기 원서접수</span>
+                            <span class="ef-date-value">${sch['실기원서접수']}</span>
+                        </div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">실기시험</span>
+                            <span class="ef-date-value">${sch['실기시험']}</span>
+                        </div>
+                        <div class="ef-date-box">
+                            <span class="ef-date-label">최종 합격발표</span>
+                            <span class="ef-date-value">${sch['최종합격발표']}</span>
+                        </div>
                     </div>
                 `;
                 scheduleList.appendChild(div);
             });
 
-            const display = document.getElementById('schedule-display');
-            display.classList.add('active');
-            display.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('schedule-display').classList.add('active');
+            document.getElementById('search-results').style.display = 'none';
         }
 
-        document.getElementById('ef-searchInput').onkeypress = (e) => {
-            if (e.key === 'Enter') searchQual();
-        };
+        document.getElementById('ef-searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchQual();
+            }
+        });
     </script>
+
 </body>
 
 </html>
